@@ -1,6 +1,15 @@
 import logo from './logo.svg';
 import './App.css';
 
+const environmentVariables = process.env;
+
+// Log all environment variables
+console.log("Environment variables:");
+for (const key in environmentVariables) {
+  if (Object.hasOwnProperty.call(environmentVariables, key)) {
+    console.log(`${key}: ${environmentVariables[key]}`);
+  }
+}
 function App() {
   return (
     <div className="App">
